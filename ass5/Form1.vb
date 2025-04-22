@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.ComponentModel.DataAnnotations
+
+Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = "Regestration Form"
         Label2.Text = "First Name"
@@ -26,9 +28,45 @@
         CheckBox2.Text = "Show"
         TextBox4.PasswordChar = "*"
         TextBox5.PasswordChar = "*"
-
+        Label14.Text = ""
+        Label14.ForeColor = Color.Red
     End Sub
-
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles TextBox4.TextChanged
+        If TextBox4.Text.Length < LastChecked Then
+            resetFlags()
+            For Each ch As Char In TextBox4.Text
+                updateFlag(ch)
+            Next
+        ElseIf TextBox4.Text.Length > LastChecked Then
+            For i As Integer = LastChecked To LastChecked
+                updateFlag(TextBox4.Text(i))
+            Next
+        End If
+        If Not Length AndAlso TextBox4.Text.Length >= 8 Then
+            Length = True
+        End If
+        LastChecked = TextBox4.Text.Length
+        If capital Then
+            Label8.ForeColor = Color.Green
+        Else
+            Label8.ForeColor = Color.Red
+        End If
+        If lower Then
+            Label9.ForeColor = Color.Green
+        Else
+            Label9.ForeColor = Color.Red
+        End If
+        If Speacial Then
+            Label10.ForeColor = Color.Green
+        Else
+            Label10.ForeColor = Color.Red
+        End If
+        If Length Then
+            Label11.ForeColor = Color.Green
+        Else
+            Label11.ForeColor = Color.Red
+        End If
+    End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -68,11 +106,20 @@
             Return
         End If
         Label13.Text = ""
-
+        If Not AllCondition Then
+            Label13.Text = "Can't Submit You Don't Match Password Criteria!"
+            Return
+        End If
+        Dim Name As String = TextBox1.Text & " " & TextBox2.Text
+        Dim Fname As String = TextBox3.Text
+        Dim password As String = TextBox4.Text
+        Dim Form2 As New Form2()
+        Form2.SetUserData(Name, Fname, password)
+        Form2.Show()
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = CheckState.Checked Then
+        If CheckBox1.Checked = True Then
             TextBox4.PasswordChar = ""
             CheckBox1.Text = "Hide"
         Else
@@ -82,12 +129,22 @@
     End Sub
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
-        If CheckBox2.Checked = CheckState.Checked Then
+        If CheckBox2.Checked = True Then
             TextBox5.PasswordChar = ""
             CheckBox2.Text = "Hide"
         Else
             TextBox5.PasswordChar = "*"
             CheckBox2.Text = "Show"
+        End If
+    End Sub
+
+    Private Sub TextBox5_TextChanged(sender As Object, e As EventArgs) Handles TextBox5.TextChanged
+        If TextBox5.Text.Equals(TextBox4.Text) Then
+            Label14.Text = "Password Matched!"
+            Label14.ForeColor = Color.Green
+        Else
+            Label14.Text = "Password Not Matched!"
+            Label14.ForeColor = Color.Green
         End If
     End Sub
 End Class

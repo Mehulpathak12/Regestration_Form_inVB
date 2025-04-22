@@ -46,6 +46,7 @@ Partial Class Form1
         Button2 = New Button()
         CheckBox1 = New CheckBox()
         CheckBox2 = New CheckBox()
+        Label14 = New Label()
         SuspendLayout()
         ' 
         ' Label1
@@ -107,14 +108,14 @@ Partial Class Form1
         ' 
         ' TextBox4
         ' 
-        TextBox4.Location = New Point(306, 230)
+        TextBox4.Location = New Point(306, 269)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(340, 27)
         TextBox4.TabIndex = 8
         ' 
         ' Label5
         ' 
-        Label5.Location = New Point(99, 230)
+        Label5.Location = New Point(99, 269)
         Label5.Name = "Label5"
         Label5.Padding = New Padding(2)
         Label5.Size = New Size(201, 38)
@@ -123,14 +124,14 @@ Partial Class Form1
         ' 
         ' TextBox5
         ' 
-        TextBox5.Location = New Point(306, 268)
+        TextBox5.Location = New Point(306, 307)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(340, 27)
         TextBox5.TabIndex = 10
         ' 
         ' Label6
         ' 
-        Label6.Location = New Point(99, 268)
+        Label6.Location = New Point(99, 307)
         Label6.Name = "Label6"
         Label6.Padding = New Padding(2)
         Label6.Size = New Size(201, 38)
@@ -140,7 +141,7 @@ Partial Class Form1
         ' Label7
         ' 
         Label7.Font = New Font("Oswald", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(99, 306)
+        Label7.Location = New Point(99, 387)
         Label7.Name = "Label7"
         Label7.Padding = New Padding(2)
         Label7.Size = New Size(355, 33)
@@ -149,7 +150,7 @@ Partial Class Form1
         ' 
         ' Label8
         ' 
-        Label8.Location = New Point(209, 339)
+        Label8.Location = New Point(209, 420)
         Label8.Name = "Label8"
         Label8.Padding = New Padding(2)
         Label8.Size = New Size(437, 38)
@@ -158,7 +159,7 @@ Partial Class Form1
         ' 
         ' Label9
         ' 
-        Label9.Location = New Point(209, 377)
+        Label9.Location = New Point(209, 458)
         Label9.Name = "Label9"
         Label9.Padding = New Padding(2)
         Label9.Size = New Size(437, 38)
@@ -167,7 +168,7 @@ Partial Class Form1
         ' 
         ' Label10
         ' 
-        Label10.Location = New Point(209, 415)
+        Label10.Location = New Point(209, 496)
         Label10.Name = "Label10"
         Label10.Padding = New Padding(2)
         Label10.Size = New Size(437, 38)
@@ -176,7 +177,7 @@ Partial Class Form1
         ' 
         ' Label11
         ' 
-        Label11.Location = New Point(209, 453)
+        Label11.Location = New Point(209, 534)
         Label11.Name = "Label11"
         Label11.Padding = New Padding(2)
         Label11.Size = New Size(437, 38)
@@ -185,7 +186,7 @@ Partial Class Form1
         ' 
         ' Label12
         ' 
-        Label12.Location = New Point(99, 505)
+        Label12.Location = New Point(99, 233)
         Label12.Name = "Label12"
         Label12.Padding = New Padding(2)
         Label12.Size = New Size(201, 38)
@@ -195,7 +196,7 @@ Partial Class Form1
         ' RadioButton1
         ' 
         RadioButton1.AutoSize = True
-        RadioButton1.Location = New Point(306, 505)
+        RadioButton1.Location = New Point(306, 233)
         RadioButton1.Name = "RadioButton1"
         RadioButton1.Size = New Size(121, 24)
         RadioButton1.TabIndex = 17
@@ -206,7 +207,7 @@ Partial Class Form1
         ' RadioButton2
         ' 
         RadioButton2.AutoSize = True
-        RadioButton2.Location = New Point(433, 505)
+        RadioButton2.Location = New Point(433, 233)
         RadioButton2.Name = "RadioButton2"
         RadioButton2.Size = New Size(121, 24)
         RadioButton2.TabIndex = 18
@@ -216,7 +217,7 @@ Partial Class Form1
         ' 
         ' Label13
         ' 
-        Label13.Location = New Point(99, 573)
+        Label13.Location = New Point(99, 615)
         Label13.Name = "Label13"
         Label13.Padding = New Padding(2)
         Label13.Size = New Size(739, 65)
@@ -225,7 +226,7 @@ Partial Class Form1
         ' 
         ' Button1
         ' 
-        Button1.Location = New Point(172, 641)
+        Button1.Location = New Point(172, 683)
         Button1.Name = "Button1"
         Button1.Size = New Size(155, 49)
         Button1.TabIndex = 20
@@ -234,7 +235,7 @@ Partial Class Form1
         ' 
         ' Button2
         ' 
-        Button2.Location = New Point(491, 641)
+        Button2.Location = New Point(491, 683)
         Button2.Name = "Button2"
         Button2.Size = New Size(155, 49)
         Button2.TabIndex = 21
@@ -244,7 +245,7 @@ Partial Class Form1
         ' CheckBox1
         ' 
         CheckBox1.AutoSize = True
-        CheckBox1.Location = New Point(652, 232)
+        CheckBox1.Location = New Point(652, 271)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Size(103, 24)
         CheckBox1.TabIndex = 22
@@ -254,18 +255,28 @@ Partial Class Form1
         ' CheckBox2
         ' 
         CheckBox2.AutoSize = True
-        CheckBox2.Location = New Point(652, 271)
+        CheckBox2.Location = New Point(652, 310)
         CheckBox2.Name = "CheckBox2"
         CheckBox2.Size = New Size(103, 24)
         CheckBox2.TabIndex = 23
         CheckBox2.Text = "CheckBox2"
         CheckBox2.UseVisualStyleBackColor = True
         ' 
+        ' Label14
+        ' 
+        Label14.Location = New Point(353, 337)
+        Label14.Name = "Label14"
+        Label14.Padding = New Padding(2)
+        Label14.Size = New Size(201, 38)
+        Label14.TabIndex = 24
+        Label14.Text = "Label14"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(914, 723)
+        ClientSize = New Size(914, 825)
+        Controls.Add(Label14)
         Controls.Add(CheckBox2)
         Controls.Add(CheckBox1)
         Controls.Add(Button2)
@@ -320,5 +331,6 @@ Partial Class Form1
     Friend WithEvents Button2 As Button
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents Label14 As Label
 
 End Class
